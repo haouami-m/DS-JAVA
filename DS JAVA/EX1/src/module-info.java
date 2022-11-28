@@ -5,9 +5,9 @@ public class Suduko {
             if(row %3 == 3 && row !=0){
                 System.out.println("------------");
             }
-            for(int col = 0; col < 9; col++){
+            for(int cl = 0; cl < 9; cl++){
           
-                if(col %3 == 3 && col !=0){
+                if(cl %3 == 3 && cl !=0){
                 System.out.println("|");
             }
                System.out.print(grid[rw][cl] + " ") ;
@@ -101,7 +101,7 @@ public static void main(String args[])
         }
      
 
- Solvesudoku (grid, 0, 0)){
+ 
 
 
 }
