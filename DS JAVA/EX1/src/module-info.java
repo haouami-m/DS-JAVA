@@ -1,8 +1,8 @@
 public class Suduko {
   private static void printSol(int[][] grid){
-        for(int row = 0; row < 9; row++){
+        for(int rw = 0; rw < 9; rw++){
           
-            if(row %3 == 3 && row !=0){
+            if(rw %3 == 3 && rw !=0){
                 System.out.println("------------");
             }
             for(int cl = 0; cl < 9; cl++){
@@ -40,7 +40,7 @@ public class Suduko {
                 if (grid[rw][cl] == 0){
                     for(int k = 1; k <= 9; k++){
                         if(isValid(grid, k, rw, cl)){
-                            grid[row][col] = k ;
+                            grid[rw][cl] = k ;
                             
                             if( Solvesudoku(grid)){
                                 return true ;
@@ -89,12 +89,12 @@ public static void main(String args[])
         
         if (Solvesudoku (grid)){
             System.out.println("le solution de Matrice Puzzle est :");
-            System.out.println("-----------------------------------");
+            System.out.println("--------------------");
         }
        
         else{
-            System.out.println("\t \t le solution de Matrice Puzzle est Impossible !!!");
-            System.out.println("-------------------------------------------------------");
+            System.out.println(" le solution de Matrice Puzzle est Impossible !!!");
+            System.out.println("---------------------------------");
         }
         printSol(grid);
         }while(!Solvesudoku (grid));
